@@ -65,3 +65,11 @@ commands:
           kill -15 ${node_server_pids} &>/dev/null && echo 'Done.'
       group:
         kind: run
+  - id: 6-Deploy
+    exec:
+      label: "Deploy to Openshift"
+      component: tools
+      commandLine: >-
+          oc projects
+      group:
+        kind: run
