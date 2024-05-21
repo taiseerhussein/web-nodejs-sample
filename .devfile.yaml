@@ -67,7 +67,7 @@ commands:
         kind: run
   - id: 6-deploy
     exec:
-      label: "Deploy to Openshift "
+      label: "Deploy to Openshift"
       component: tools
       commandLine: oc new-app https://github.com/taiseerhussein/web-nodejs-sample.git#main -n zztaiseer
       group:
