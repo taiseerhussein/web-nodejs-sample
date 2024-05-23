@@ -12,7 +12,7 @@ RUN npm ci
 COPY --chown=1001:1001 . .
 
 # Compile the source TS into JS files
-RUN npm run build:ts
+# RUN npm run build:ts
 
 # Configure fastify behaviour, and NODE_ENV
 ENV NODE_ENV=production
