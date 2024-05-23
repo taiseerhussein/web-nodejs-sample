@@ -6,7 +6,7 @@ WORKDIR /usr/src/app
 COPY --chown=1001:1001 package*.json ./
 
 # Install dependencies and devDependencies
-RUN npm ci
+RUN npm install
 
 # Copy in source code and other assets
 COPY --chown=1001:1001 . .
@@ -21,9 +21,6 @@ ENV FASTIFY_ADDRESS 0.0.0.0
 
 EXPOSE 8080
 
-# Set the fastify-cli binary as the entrypoint
-ENTRYPOINT [ "./node_modules/.bin/fastify" ]
-
 # Launch the container by passing these parameters to the entrypoint
 # These parameters can be overridden if you’d like
-CMD [ "start", "-l", "info", "dist/app.js" ]
+CMD [ "nodemon", "app.js" ]
