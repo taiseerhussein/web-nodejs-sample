@@ -16,7 +16,7 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-  res.send('Hello World! baseline');
+  res.send('Hello World! demo');
 });
 
 app.listen(8080, function () {
